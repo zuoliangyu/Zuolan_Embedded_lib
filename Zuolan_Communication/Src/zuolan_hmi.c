@@ -3,7 +3,7 @@
  * @author 左岚，bilibili空间@https://space.bilibili.com/27619688
  * @brief HMI人机交互实现文件
  */
-#include "my_hmi.h"
+#include "zuolan_hmi.h"
 #include "math.h"
 
 // 根据配置选择HMI串口
