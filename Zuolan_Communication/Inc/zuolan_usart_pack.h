@@ -12,7 +12,7 @@
 #define FRAME_TAIL 0x5A
 #define MIN_FRAME_SIZE 3
 #define MAX_VARIABLES 10
-
+#define MIN_FRAME_LENGTH 3 // 最小帧长度（帧头  + 校验和 + 帧尾）
 // 数据类型
 typedef enum
 {

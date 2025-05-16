@@ -215,11 +215,13 @@ uint16_t zuolan_PrepareFrame(uint8_t *buffer, uint16_t maxLength)
 }
 
 /**
- * @brief 发送数据帧（通过USART2）
+ * @brief 发送数据帧
  * @param frame 数据帧指针
  * @param length 数据帧长度
  */
 void zuolan_SendFrame(uint8_t *frame, uint16_t length)
 {
+#if USART1_MODE_PACK | USART2_MODE_PACK | USART3_MODE_PACK
     HAL_UART_Transmit(&huart_pack, frame, length, HAL_MAX_DELAY);
+#endif
 }

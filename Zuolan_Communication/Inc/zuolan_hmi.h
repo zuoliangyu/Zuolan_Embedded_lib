@@ -6,7 +6,7 @@
 #ifndef __MY_HMI_H__
 #define __MY_HMI_H__
 #include "config_usart.h"
-
+#include "zuolan_usart.h"
 void zuolan_HMI_Send_String(char *obj_name, char *show_data);
 void zuolan_HMI_Send_Int(char *obj_name, int show_data);
 void zuolan_HMI_Send_Float(char *obj_name, float show_data, int point_index);
