@@ -1,17 +1,19 @@
-#include "zuolan_serial.h"
+#include "zuolan_usart.h"
 void main()
 {
     while (1)
     {
-        if (zuolan_commandReceived1)
+        if (commandReceived1)
         {
-            zuolan_commandReceived1 = 0;
-            memset(zuolan_rxBuffer1, 0, zuolan_rxIndex1);
+            commandReceived1 = 0;
+            memset(rxBuffer1, 0, rxIndex1);
+            rxIndex1 = 0;
         }
-        if (zuolan_commandReceived3)
+        if (commandReceived3)
         {
-            zuolan_commandReceived3 = 0;
-            memset(zuolan_rxBuffer3, 0, zuolan_rxIndex3);
+            commandReceived3 = 0;
+            memset(rxBuffer3, 0, rxIndex3);
+            rxIndex3 = 0;
         }
     }
 }
